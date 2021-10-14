@@ -1,5 +1,17 @@
 import random
 
+
+#round one
+#Instead of using index as is the case here, one can use a for loop
+# display = []
+# word_length = len(choose_word)
+# for _ in range(word_length):
+#   display += "_"
+# for position in range(len(choose_word)):
+#   letter = choose_word[position]                      <-- instead of index
+#   if letter == guess:
+#     display[position] = letter        
+
 word_list = ['mosquito', 'umbrella', 'bus']
 
 choose_word = random.choice(word_list)
@@ -7,7 +19,6 @@ choose_word = random.choice(word_list)
 progress = ''
 user_input = ''
 correct_letts = ''
-test = bool(1) 
 
 for n in range(0,len(choose_word)):
   progress+='_'
@@ -33,3 +44,4 @@ while (1):
       p = list(progress)
       p[choose_word.index(letter, 0)] = letter
       progress = "".join(p)
+
