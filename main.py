@@ -7,14 +7,19 @@ choose_word = random.choice(word_list)
 progress = ''
 user_input = ''
 correct_letts = ''
+test = bool(1) 
 
 for n in range(0,len(choose_word)):
   progress+='_'
 
 print('Guess the word')
 #print('mosquito'.index('t', 0))
-while (len(choose_word) > len(user_input) or len(choose_word) >= len(correct_letts)):
+#len(choose_word) > len(user_input) or len(choose_word) >= len(correct_letts)
+while (1):
   print(progress)
+  if len(choose_word) < len(user_input) or len(choose_word) <= len(correct_letts):
+    print('Game Over')
+    break
 
   guess = input("What's your guess? ")
 
